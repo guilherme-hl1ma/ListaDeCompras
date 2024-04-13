@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="20dp"
+    tools:context=".AddNewItemActivity">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tfDescription"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:hint="Descrição do produto"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etDescricao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+        />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnAddProduto"
+        app:layout_constraintStart_toStartOf="@id/tfDescription"
+        app:layout_constraintTop_toBottomOf="@+id/tfDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Adicionar Produto"
+        android:layout_marginTop="20dp"
+    />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnHome"
+        app:layout_constraintEnd_toEndOf="@id/tfDescription"
+        app:layout_constraintTop_toBottomOf="@+id/tfDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Voltar"
+        android:layout_marginTop="20dp"
+        />
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/clSnackbar"
+        app:layout_constraintTop_toBottomOf="@id/btnHome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
